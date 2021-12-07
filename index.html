@@ -1,0 +1,90 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age Finder</title>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+
+    <div class="grid-container">
+        <div class="title"><Strong>Age Calculator</Strong></div>
+        <!-- <div class="grid-item item_0"><strong>Age Calculator</strong></div> -->
+        <div class="grid-item item_1">
+            <input type="checkbox" class="checkbox" id="checkbox">
+            <label for="checkbox" class="label" id="label">
+            <i class="fas fa-moon"></i>
+            <i class="fas fa-sun"></i>
+            <div class='ball'></div>
+      </label>
+        </div>
+        <div class="grid-item item1">Date of Birth</div>
+        <div class="grid-item item2"><input type="date" id="birth_day" class="birth_day" onchange="age_calculator()" /></div>
+        <div class="grid-item item3">Today</div>  
+        <div class="grid-item item4"><input type="date" id="today" class="today" onchange="age_calculator()" /></div> 
+    </div>
+
+    <div class="main">
+        <div class="grid-container container" id="age_card">
+            <div class="grid-item item5">
+                <div class="age_card">
+                    <div class="age_card_title">Age</div>
+                    <div class="age_card_subtitle1"><span class="age_card_subtitle1_number" id="age_card_years">00</span><span class="age_card_subtitle1_years">years</span></div>
+                    <div class="age_card_subtitle2"><span class="age_card_subtitle2_months" id="age_card_months">00</span> months | <span class="age_card_subtitle2_days" id="age_card_days">00</span> days</div>
+                </div>
+            </div>
+            <div class="grid-item item6">
+                <div class="birthday_card">
+                    <div class="birthday_card_title">Next Birthday</div>
+                    <div class="birthday_card_icon"><i class="fas fa-birthday-cake"></i></div>
+                    <div class="birthday_card_subtitle"><span class="birthday_card_subtitle_months" id="birthday_card_months">00</span> months | <span class="birthday_card_subtitle_days" id="birthday_card_days">00</span> days</div>
+                </div>
+            </div>
+            <div class="grid-item item7">
+                <div class="summary_card">
+                    <div class="summary_card_title">Summary</div>
+
+                    <div class="summary_card_subtitles_01 flex_container">
+                        <div class="flex_item">
+                            <div class="summary_card_subtitle_title">Years</div>
+                            <div class="summary_card_subtitle_subtitle" id="summary_card_years">00</div>
+                        </div>
+                        <div class="flex_item">
+                            <div class="summary_card_subtitle_title">Months</div>
+                            <div class="summary_card_subtitle_subtitle" id="summary_card_months">00</div>
+                        </div>
+                        <div class="flex_item">
+                            <div class="summary_card_subtitle_title">Weeks</div>
+                            <div class="summary_card_subtitle_subtitle" id="summary_card_weeks">00</div>
+                        </div>
+                    </div>
+
+                    <div class="summary_card_subtitles_02 flex_container">
+                        <div class="flex_item">
+                            <div class="summary_card_subtitle_title">Days</div>
+                            <div class="summary_card_subtitle_subtitle" id="summary_card_days">00</div>
+                        </div>
+                        <div class="flex_item">
+                            <div class="summary_card_subtitle_title">Hours</div>
+                            <div class="summary_card_subtitle_subtitle" id="summary_card_hours">00</div>
+                        </div>
+                        <div class="flex_item">
+                            <div class="summary_card_subtitle_title">Minutes</div>
+                            <div class="summary_card_subtitle_subtitle" id="summary_card_minutes">00</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
